@@ -2,8 +2,10 @@
   "name": "react-libs",
   "version": "0.1.0",
   "private": true,
+  "files": [
+    "libs"
+  ],
   "dependencies": {
-    "@babel/core": "7.6.0",
     "@babel/runtime": "^7.6.2",
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
@@ -66,7 +68,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "libs": "cross-env NODE_ENV=production babel src/libs -d libs"
+    "libs": "cross-env NODE_ENV=production babel src/libs --out-dir libs --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -132,10 +134,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-2": "^7.0.0",
-    "babel-cli": "^6.26.0",
     "cross-env": "^6.0.0"
   }
 }

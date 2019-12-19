@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './logo.png'
 import './index.less';
 
 class Button extends Component {
@@ -9,6 +10,7 @@ class Button extends Component {
     return (
       <div className='Button'>
         this is Button!
+        <img src={logo}/>
       </div>
     );
   }
